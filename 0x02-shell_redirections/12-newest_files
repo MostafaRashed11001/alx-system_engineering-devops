@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d  -mindepth 1 | wc -l
+find "$PWD" -type d -not -path "$PWD" -not -path "$PWD/../.." | wc -l
